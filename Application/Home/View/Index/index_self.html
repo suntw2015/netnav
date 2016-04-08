@@ -197,19 +197,40 @@
                         <div class="nba">
                             <foreach name="matchlist" item="match">
                                 <div class="match">
-                                    <div class="team">
-                                        {$match.visit_team}
-                                        <div class="teamimg">
-                                            <img src="{$match.visit_team_img}"/>
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            {$match.time}
+                                        </div>
+                                        <div class="col-xs-10">
+                                            {$match.home_team.profile.name} {$match.score.homeScore}
+                                            :
+                                            {$match.score.awayScore} {$match.visit_team.profile.name}
                                         </div>
                                     </div>
-                                    {$match.time}
-                                    <div class="team">
-                                        {$match.home_team}
-                                        <div class="teamimg">
-                                            <img src="{$match.home_team_img}"/>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            {$match.home_team.profile.name}
+                                        </div>
+                                        <div class="col-xs-4">
+                                            {$match.score.statusDesc}
+                                        </div>
+                                        <div class="col-xs-4">
+                                            {$match.visit_team.profile.name}
                                         </div>
                                     </div>
+                                    <!--<div class="team">-->
+                                        <!--{$match.home_team.profile.name}-->
+                                        <!--&lt;!&ndash;<div class="teamimg">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<img src="{$match.visit_team_img}"/>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                    <!--</div>-->
+                                    <!--{$match.time}-->
+                                    <!--<div class="team">-->
+                                        <!--{$match.visit_team.profile.name}-->
+                                        <!--<div class="teamimg">-->
+                                            <!--&lt;!&ndash;<img src="{$match.home_team_img}"/>&ndash;&gt;-->
+                                        <!--</div>-->
+                                    <!--</div>-->
                                 </div>
                             </foreach>
                         </div>

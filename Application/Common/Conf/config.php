@@ -9,6 +9,22 @@ return array(
 		'SCOREDETAIL' => 'http://bifen.qiumibao.com/json/list.htm',
 	),
 
+	'NBA'	=> array(
+		"MATCH" => "http://china.nba.com/static/data/scores/miniscoreboard.json"
+	),
+
+	'NBA_DAY_MATCH' => array(
+		-1  => "previous",
+		0   => "today",
+		1   => "next",
+		2	=> "next2",
+		3	=> "next3",
+		4	=> "next4",
+		5	=> "next5",
+		6	=> "next6",
+		7	=> "next7",
+	),
+
 	'TMPL_PARSE_STRING'=>array(
 		'__PUBLIC__'=>'/',
 		'__JS__'=>'/js',

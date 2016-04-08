@@ -184,19 +184,40 @@
                     <div class="main-right col-xs-3">
                         <div class="nba">
                             <?php if(is_array($matchlist)): foreach($matchlist as $key=>$match): ?><div class="match">
-                                    <div class="team">
-                                        <?php echo ($match["visit_team"]); ?>
-                                        <div class="teamimg">
-                                            <img class="img-circle" src="<?php echo ($match["visit_team_img"]); ?>"/>
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <?php echo ($match["time"]); ?>
+                                        </div>
+                                        <div class="col-xs-10">
+                                            <?php echo ($match["home_team"]["profile"]["name"]); ?> <?php echo ($match["score"]["homeScore"]); ?>
+                                            :
+                                            <?php echo ($match["score"]["awayScore"]); ?> <?php echo ($match["visit_team"]["profile"]["name"]); ?>
                                         </div>
                                     </div>
-                                    <?php echo ($match["time"]); ?>
-                                    <div class="team">
-                                        <?php echo ($match["home_team"]); ?>
-                                        <div class="teamimg">
-                                            <img class="img-circle" src="<?php echo ($match["home_team_img"]); ?>"/>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <?php echo ($match["home_team"]["profile"]["name"]); ?>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <?php echo ($match["score"]["statusDesc"]); ?>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <?php echo ($match["visit_team"]["profile"]["name"]); ?>
                                         </div>
                                     </div>
+                                    <!--<div class="team">-->
+                                        <!--<?php echo ($match["home_team"]["profile"]["name"]); ?>-->
+                                        <!--&lt;!&ndash;<div class="teamimg">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<img src="<?php echo ($match["visit_team_img"]); ?>"/>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                    <!--</div>-->
+                                    <!--<?php echo ($match["time"]); ?>-->
+                                    <!--<div class="team">-->
+                                        <!--<?php echo ($match["visit_team"]["profile"]["name"]); ?>-->
+                                        <!--<div class="teamimg">-->
+                                            <!--&lt;!&ndash;<img src="<?php echo ($match["home_team_img"]); ?>"/>&ndash;&gt;-->
+                                        <!--</div>-->
+                                    <!--</div>-->
                                 </div><?php endforeach; endif; ?>
                         </div>
 
