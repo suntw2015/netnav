@@ -1,0 +1,33 @@
+.match{
+	/*display: inline-block;*/
+	border-bottom: 1px solid #9da6bb;
+	max-height: 25px;
+	position: relative;
+	/*overflow: hidden;*/
+}
+
+.match img{
+	width:20px;
+	height:20px;
+}
+
+.match .time{
+	text-align: center;
+}
+
+.match span{
+	/*font-size: 17px;*/
+}
+
+.match .team{
+	/*margin-left: 2px;*/
+	/*margin-right: 2px;*/
+	display: inline-block;
+	min-width:68px;
+	overflow: hidden;
+}
+
+.match .teamright{
+	position: absolute;
+	right:0px;
+}

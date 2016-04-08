@@ -1,0 +1,312 @@
+
+.container{
+	min-width: 1140px;
+}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+}
+
+a, a:hover {
+	text-decoration: none;
+	outline-style: none;
+}
+
+.no-padding-right {
+	padding-right: 0!important;
+}
+
+.no-padding-left {
+	padding-left: 0!important;
+}
+
+.head{
+	position: relative;
+	height: 130px;
+}
+
+.logo{
+	position: absolute;
+	top:23px;
+	height:68px;
+	width:234px;
+	background: url("/pic/logo.png") no-repeat;
+}
+
+.weather{
+	position: absolute;
+	width: 565px;
+	top: 5px;
+	left: 300px;
+}
+
+.adv{
+	position: absolute;
+	top:20px;
+	width: 180px;
+	right:0;
+}
+
+/*.search-box{*/
+	/*position: relative;*/
+/*}*/
+
+.search-box{
+	position: relative;
+	width: 100%;
+	height: 108px;
+	padding-left: 20px;
+	background-color: rgba(15,15,15,0.1);
+	opacity: 0.9;
+}
+
+.search-head{
+	position: absolute;
+	width: 100%;
+	margin-left: 130px;
+	margin-top: 15px;
+}
+
+.search-content{
+	position: absolute;
+	width: 100%;
+	margin-top: 55px;
+}
+
+.search-select{
+	position: absolute;
+	width : 100px;
+	height : 45px;
+	background-color: #9bbed9;
+}
+
+.search-input{
+	position: absolute;
+	left: 130px;
+	height:45px;
+	width: 650px;
+}
+
+.search-input .search{
+	width:100%;
+	height: 100%;
+}
+
+.search-button{
+	position: absolute;
+	left:780px;
+	width:50px;
+	width:80px;
+	height:45px;
+}
+
+.search-button .btn{
+	height: 100%;
+	width: 100%;
+}
+
+.main-navbar{
+	margin: 11px 0 10px;
+	height:47px;
+	background-color: #ffffff;
+	border: 1px #a5b3c6 solid;
+}
+
+.main-navbar ul{
+	display: inline-flex;
+}
+
+.main-navbar ul li{
+	width: 120px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.main-navbar-icon{
+	background: url("/pic/nav-icons.png");
+	width: 25px;
+	height: 19px;
+	margin-right: 6px;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+}
+
+.main-navbar-icon-news{
+	background-position: -5px -176px;
+}
+
+.main-navbar-icon-tv{
+	background-position: -5px -232px;
+}
+
+.main-navbar-icon-movie{
+	background-position: -5px -147px;
+}
+
+.main-navbar-icon-lottery{
+	background-position: -5px -90px;
+}
+
+.main-navbar-icon-shop{
+	background-position: -5px -5px;
+}
+
+.main-navbar-icon-novel{
+	background-position: -5px -204px;
+}
+
+.main-navbar-icon-game{
+	background-position: -5px -34px;
+}
+
+.main-navbar-icon-group{
+	background-position: -5px -62px;
+}
+
+.main-navbar-icon-travel{
+	background-position: -5px -259px;
+}
+
+.main-body{
+	font-size: 100%;
+}
+
+.main-left{
+	width:73%;
+	left: 0px;
+}
+
+.main-left .site-block{
+	font-size: 14px;
+	width: 130px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+	text-align: center;
+	position: relative;
+}
+
+.main-left a{
+	color: #3f3f3f;
+	font-size: 14px;
+}
+
+.main-right{
+	/*float: right;*/
+	border: 1px #a5b3c6 solid;
+	background-color: #ffffff;
+	width: 26%;
+	right: 0px;
+	height: 500px;;
+}
+
+.title-nav,.detail-nav{
+	position: relative;
+	border: 1px #a5b3c6 solid;
+	background-color: #ffffff;
+}
+
+.title-nav{
+	min-height: 250px;
+}
+
+.line{
+	display: inline-block;
+	width: 92%;
+	height: 1px;
+	border-bottom: 1px dashed #d9e8f4;
+	margin-top: 5px;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+.detail-nav{
+	position: relative;
+	height: auto;
+	margin-top: 5px;
+}
+
+.detail-nav .detail-box-title{
+	width: 100%;
+	display: inline-flex;
+	height: 37px;
+	line-height: 37px;
+	background-color: #f3f6f8;
+	text-indent: 6px;
+}
+
+.detail-box-title-abox a{
+	text-align: center;
+	margin: 0 12px;
+	padding: 0;
+}
+
+.detail-box-title-abox a:link{
+	line-height: 37px;
+	height: 37px;
+	font-size: 14px;
+	position: relative;
+	color: #258be3;
+}
+
+.title-nav-first,.title-nav-second{
+	position: relative;
+	margin-left: 20px;
+}
+
+.detail-box-body{
+}
+
+.detail-box-body-first,.detail-box-body-item{
+	display: inline-flex;
+}
+
+.detail-box-body-first{
+	width: 100px;
+	height: 37px;
+	line-height: 37px;
+	margin-left: 15px;
+}
+
+.detail-box-body-first a{
+	color: #258be3;
+}
+
+.detail-box-body-item{
+	height: 37px;
+	line-height: 37px;
+	min-width: 70px;
+	margin: 0px 10px;
+	text-align: center;
+}
+
+.detail-box-body-item a{
+	width: 100%;
+}
+
+footer{
+	width: 100%;
+	height: 60px;
+	bottom: 0px;
+	margin-top: 10px;
+	background-color: #a5b3c6;
+	text-align: center;
+	color: #4d5c70;
+	font-size: 70%;
+	vertical-align: baseline;
+}
+
+footer .statement{
+	padding-top: 10px;
+}
+
+footer .copyyright{
+	margin-bottom: 5px;
+}
+
+.match{
+	display: inline-block;
+}
