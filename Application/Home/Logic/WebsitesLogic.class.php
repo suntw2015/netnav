@@ -9,6 +9,15 @@
 namespace Home\Logic;
 class WebsitesLogic{
 
+    protected $data = array();
+
+    public function __construct(){
+        if(empty($data)){
+            $websitesModel = new \Home\Model\WebsitesModel();
+            $this->data = $websitesModel->loadAll();
+        }
+    }
+
     public function getNavList(){
 
         $navlist = array();
@@ -16,20 +25,17 @@ class WebsitesLogic{
 
         $navtypelist = C("NAV_TYPE");
         foreach($navtypelist as $key=>$value){
-//            foreach($value as $k=>$v){
-//                $navlist[$key][$k] = $websitesModel->getListByType($v);
-//            }
             $navlist[$key] = array(
-                "title" => $websitesModel->getListByType($key),
+                "title" => $this->getdata(array("type"=>$key,"status"=>1)),
                 "content" => array(),
             );
 
-            $contentlist = $websitesModel->getListByType($key."_content_first");
+            $contentlist = $this->getdata(array("type"=>$key."_content_first","status"=>1));
 
             foreach($contentlist as $k=>$v){
                 $navlist[$key]["content"][]=array(
                     "first"=>$v,
-                    "list"=>$websitesModel->getByCondition(array("pid"=>$v['id'],'status'=>1)),
+                    "list"=>$this->getdata(array("pid"=>$v['id'],'status'=>1)),
                 );
             }
         }
@@ -43,9 +49,29 @@ class WebsitesLogic{
 
         $navtypelist = C("NAV_TYPE_HEAD");
         foreach($navtypelist as $value){
-            $navlist[$value] = $websitesModel->getListByType($value);
+            $navlist[$value] = $this->getdata(array("type"=>$value,"status"=>1));
         }
 
         return $navlist;
+    }
+
+    public function getdata($condition){
+        $list = array();
+
+        foreach($this->data as $key=>$value){
+            $flag = 1;
+            foreach($condition as $k=>$v){
+                if($value[$k] != $v){
+                    $flag = 0;
+                    break;
+                }
+            }
+
+            if($flag == 1){
+                $list[] = $value;
+            }
+        }
+
+        return $list;
     }
 }

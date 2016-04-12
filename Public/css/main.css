@@ -75,9 +75,10 @@ a, a:hover {
 
 .search-select{
 	position: absolute;
-	width : 100px;
-	height : 45px;
-	background-color: #9bbed9;
+	margin-left: 30px;
+	width : 95px;
+	height : 35px;
+	background-image: url(/pic/urllogo.png);
 }
 
 .search-input{
@@ -196,11 +197,11 @@ a, a:hover {
 
 .main-right{
 	/*float: right;*/
-	border: 1px #a5b3c6 solid;
-	background-color: #ffffff;
+	/*border: 1px #a5b3c6 solid;*/
+	/*background-color: #ffffff;*/
 	width: 26%;
 	right: 0px;
-	height: 500px;;
+	/*height: 500px;;*/
 }
 
 .title-nav,.detail-nav{
@@ -307,6 +308,67 @@ footer .copyyright{
 	margin-bottom: 5px;
 }
 
+.nba{
+	padding-left: 15px;
+	position: relative;
+}
+
 .match{
+	margin-top: 5px;
 	display: inline-block;
+	width:100%;
+}
+
+.match .match-time{
+	line-height: 25px;
+	font-size: 100%;
+}
+
+.match .score{
+	display: inline-block;
+	width:25px;
+}
+
+.match .team-icon{
+	margin: 0 5px;
+	width:50px;
+	height:33px;
+}
+
+.match .team-name{
+	width: 60px;
+	text-align: center;
+}
+
+.match .match-status{
+	width: 80px;
+	text-align: center;
+}
+
+.match .team-name-box{
+	display: inline-block;
+	width:50px;
+	text-align: center;
+}
+
+.match .team-name-box-left{
+	margin-left: 65px;
+}
+
+.match .team-name-box-right{
+	margin-left: -10px;
+}
+
+.match .match-status{
+	display: inline-block;
+}
+
+.nba,.lottery{
+	width: 100%;
+	border: 1px #a5b3c6 solid;
+	background-color: #ffffff;
+}
+
+.lottery{
+	margin-top: 10px;
 }

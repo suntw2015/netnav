@@ -17,4 +17,8 @@ class WebsitesModel extends \Lib\Model\AppModel{
         $conditions =  array("type"=>$type,"status"=>1);
         return $this->Model->where($conditions)->select();
     }
+
+    public function loadAll(){
+        return $this->Model->select();
+    }
 }

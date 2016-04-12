@@ -92,13 +92,12 @@
                     </div>
                     <div class="search-content">
                         <div class="search-select">
-                            <p>select</p>
                         </div>
                         <div class="search-input">
-                            <input type="text" class="form-control search" />
+                            <input type="text" class="form-control search" id="input-search" />
                         </div>
                         <div class="search-button">
-                            <button type="button" class="btn btn-default">Google</button>
+                            <button type="button" class="btn btn-default" id="btn-search">百度一下</button>
                         </div>
                     </div>
                 </div>
@@ -146,100 +145,7 @@
                 </div>
 
                 <!-- 下方主要导航 -->
-                <div class="main-body">
-                    <div class="main-left col-xs-9 no-padding-left">
-                        <div class="title-nav">
-                            <div class="title-nav-first">
-                                <foreach name="headsites.first_nav" item="site">
-                                    <div class="col-xs-2 site-block">
-                                        <a href="{$site.url}">{$site.name}</a>
-                                    </div>
-                                </foreach>
-                            </div>
-                            <div class="line"></div>
-                            <div class="title-nav-second">
-                                <foreach name="headsites.second_nav" item="site">
-                                    <div class="col-xs-2 site-block">
-                                        <a href="{$site.url}">{$site.name}</a>
-                                    </div>
-                                </foreach>
-                            </div>
-                        </div>
-                        <div class="detail-nav">
-                            <foreach name="sites" item="site">
-                                <div class="detail-box">
-                                    <div class="detail-box-title">
-                                        <foreach name="site.title" item="title">
-                                            <div class="detail-box-title-abox">
-                                                <a href="{$title.url}">{$title.name}</a>
-                                            </div>
-                                        </foreach>
-                                    </div>
-                                    <div class="detail-box-body">
-                                        <foreach name="site.content" item="content">
-                                            <div class="detail-box-line">
-                                                <div class="detail-box-body-first">
-                                                    <a href="{$content.first.url}">|{$content.first.name}|</a>
-                                                </div>
-                                                <foreach name="content.list" item="detail">
-                                                    <div class="detail-box-body-item">
-                                                        <a href="{$detail.url}">{$detail.name}</a>
-                                                    </div>
-                                                </foreach>
-                                            </div>
-                                        </foreach>
-                                    </div>
-                                </div>
-                            </foreach>
-                        </div>
-                    </div>
-                    <div class="main-right col-xs-3">
-                        <div class="nba">
-                            <foreach name="matchlist" item="match">
-                                <div class="match">
-                                    <div class="row">
-                                        <div class="col-xs-2">
-                                            {$match.time}
-                                        </div>
-                                        <div class="col-xs-10">
-                                            {$match.home_team.profile.name} {$match.score.homeScore}
-                                            :
-                                            {$match.score.awayScore} {$match.visit_team.profile.name}
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            {$match.home_team.profile.name}
-                                        </div>
-                                        <div class="col-xs-4">
-                                            {$match.score.statusDesc}
-                                        </div>
-                                        <div class="col-xs-4">
-                                            {$match.visit_team.profile.name}
-                                        </div>
-                                    </div>
-                                    <!--<div class="team">-->
-                                        <!--{$match.home_team.profile.name}-->
-                                        <!--&lt;!&ndash;<div class="teamimg">&ndash;&gt;-->
-                                            <!--&lt;!&ndash;<img src="{$match.visit_team_img}"/>&ndash;&gt;-->
-                                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                                    <!--</div>-->
-                                    <!--{$match.time}-->
-                                    <!--<div class="team">-->
-                                        <!--{$match.visit_team.profile.name}-->
-                                        <!--<div class="teamimg">-->
-                                            <!--&lt;!&ndash;<img src="{$match.home_team_img}"/>&ndash;&gt;-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                </div>
-                            </foreach>
-                        </div>
-
-                        <div class="lottery">
-
-                        </div>
-                    </div>
-                </div>
+                <include file="Index/content"/>
             </div>
         </div>
 
@@ -253,5 +159,6 @@
             <div class="copyright">Copyright &copy; 2016 ZHENGZH . All Rights Reserved.</div>
         </footer>
         <script type="text/javascript" src="__JS__/jquery.min.js"></script>
+        <script type="text/javascript" src="__JS__/main.js"></script>
     </body>
 </html>
