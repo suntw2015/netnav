@@ -30,7 +30,7 @@ a, a:hover {
 	top:23px;
 	height:68px;
 	width:234px;
-	background: url("/pic/logo.png") no-repeat;
+	background: url("/public/pic/logo.png") no-repeat;
 }
 
 .weather{
@@ -78,7 +78,7 @@ a, a:hover {
 	margin-left: 30px;
 	width : 95px;
 	height : 35px;
-	background-image: url(/pic/urllogo.png);
+	background-image: url(/public/pic/urllogo.png);
 }
 
 .search-input{
@@ -126,7 +126,7 @@ a, a:hover {
 }
 
 .main-navbar-icon{
-	background: url("/pic/nav-icons.png");
+	background: url("/public/pic/nav-icons.png");
 	width: 25px;
 	height: 19px;
 	margin-right: 6px;

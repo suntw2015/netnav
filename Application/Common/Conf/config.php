@@ -26,10 +26,10 @@ return array(
 	),
 
 	'TMPL_PARSE_STRING'=>array(
-		'__PUBLIC__'=>'/',
-		'__JS__'=>'/js',
-		'__CSS__'=>'/css',
-		'__PIC__'=>'/pic',
+		'__PUBLIC__'=>'/public',
+		'__JS__'=>'/public/js',
+		'__CSS__'=>'/public/css',
+		'__PIC__'=>'/public/pic',
 	),
 
 	'NAV_TYPE_HEAD' => array(
